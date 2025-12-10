@@ -1,0 +1,23 @@
+/* My Plugin Styles */
+
+/* Example: Style a custom container */
+.my-plugin-container {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: var(--background-secondary);
+}
+
+/* Example: Style a button */
+.my-plugin-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    cursor: pointer;
+    border: none;
+}
+
+.my-plugin-button:hover {
+    background-color: var(--interactive-accent-hover);
+}

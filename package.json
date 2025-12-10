@@ -1,0 +1,22 @@
+{
+  "name": "obsidian-my-plugin",
+  "version": "0.1.0",
+  "description": "My Obsidian Plugin",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "0.19.11",
+    "obsidian": "latest"
+  }
+}
