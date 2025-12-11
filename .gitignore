@@ -20,3 +20,7 @@ npm-debug.log*
 
 # Test vaults
 test-vault/
+
+# Local configuration (vault paths, etc.)
+.env.local
+.env.*.local

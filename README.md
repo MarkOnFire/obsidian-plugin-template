@@ -56,14 +56,33 @@ npm run dev
 npm run build
 ```
 
-### 5. Test in Obsidian
+### 5. Deploy and Test
 
-1. Create a test vault or use an existing one
-2. Create the plugins folder: `<vault>/.obsidian/plugins/my-plugin/`
-3. Copy `main.js`, `manifest.json`, and `styles.css` to that folder
-4. Enable the plugin in Obsidian Settings → Community Plugins
+Use the included deploy script to copy your plugin to Obsidian vaults.
 
-**Tip**: Use symlinks for faster development:
+**First-time setup** - configure your vault paths (stored in `.env.local`, which is gitignored):
+```bash
+./deploy.sh --setup
+```
+
+**Deploy your plugin**:
+```bash
+# Deploy to test vault (default)
+./deploy.sh
+
+# Deploy to production vault
+./deploy.sh --prod
+
+# Deploy to both vaults
+./deploy.sh --both
+```
+
+After deployment:
+1. In Obsidian, go to Settings → Community Plugins
+2. Find your plugin and toggle it off then on
+3. Or restart Obsidian to reload all plugins
+
+**Alternative**: Use symlinks for faster development:
 ```bash
 ln -s /path/to/my-plugin/main.js /path/to/vault/.obsidian/plugins/my-plugin/main.js
 ```
@@ -78,6 +97,7 @@ my-plugin/
 ├── manifest.json        # Obsidian plugin manifest
 ├── package.json         # npm configuration
 ├── esbuild.config.mjs   # Build configuration
+├── deploy.sh            # Vault deployment script
 └── .github/
     └── workflows/
         └── build.yml    # CI workflow
