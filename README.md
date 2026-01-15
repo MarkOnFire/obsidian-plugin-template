@@ -1,5 +1,11 @@
 # Obsidian Plugin Template
 
+> **ARCHIVED**: This template is deprecated as of January 2026. New Obsidian plugins should be started using the official [obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin) and graduated from brainstorming via `the-lodge/conventions/PROJECT_GRADUATION.md`.
+>
+> The build tooling and deploy script here may still be useful as reference.
+
+---
+
 A minimal, production-ready template for building Obsidian plugins with modern JavaScript tooling.
 
 ## Features
